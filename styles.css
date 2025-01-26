@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300..800&family=Parkinsans:wght@300..800&family=Raleway:wght@100..900&display=swap");
+
+:root {
+  --primary-color: #fdc933; /* Основной цвет */
+  --background-color: #eef5ff;
+  --cart-bg-color: #364364;
+  --cart-num-bg-color: #d62240;
+  --card-bg-color: white;
+  --text-color: rgba(4, 26, 63, 0.6);
+}
+
+body {
+  background-image: url("./photo/background-star.svg");
+  background-color: var(--background-color);
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+header {
+  margin-left: 148px;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 73px;
+  font-weight: 700;
+}
+
+.header-contact {
+  display: flex;
+  gap: 20px;
+}
+
+.cart {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: var(--cart-bg-color);
+  transition: transform 0.1s;
+  cursor: pointer;
+  position: fixed;
+  top: 8px;
+  right: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart:hover {
+  transform: scale(1.1);
+}
+
+.cart__num {
+  position: absolute;
+  background-color: var(--cart-num-bg-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 120px 0;
+  border-radius: 0 0 0 300px;
+  background-color: #fafafa;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.color1 {
+  color: var(--primary-color);
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.btn {
+  display: flex;
+  align-self: flex-start;
+  padding: 15px 27px;
+  background-color: var(--primary-color);
+  font-family: "Montserrat Alternates", sans-serif;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #fafafa;
+  color: var(--primary-color);
+}
+
+.main-content {
+  margin-top: 64px;
+}
+
+.main-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cards {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.card {
+  height: 600px;
+  width: 286px;
+  background-color: var(--card-bg-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.img-card {
+  border-radius: 20px 20px 0 0;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.card-info {
+  color: var(--text-color);
+}
+
+.card-price {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+footer {
+  margin-top: 128px;
+  padding: 32px 300px;
+  background-color: var(--card-bg-color);
+  text-align: center; /* Центрирование текста в футере */
+}
+
+/* Дополнительные стили для улучшения адаптивности */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 20px 20px; /* Уменьшаем отступы на мобильных устройствах */
+  }
+
+  .cart {
+    width: 60px;
+    height: 60px;
+    right: 20px; /* Уменьшаем расстояние от края */
+  }
+
+  .cart__num {
+    width: 25px;
+    height: 25px;
+    font-size: 14px; /* Уменьшаем размер шрифта для мобильных */
+  }
+
+  .main-content {
+    margin-top: 32px; /* Уменьшаем отступ сверху для мобильных */
+  }
+
+  .card {
+    width: 100%; /* Делаем карточки адаптивными */
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+  }
+
+  .cards {
+    flex-direction: column; /* Вертикальное выравнивание карточек на мобильных */
+  }
+}
